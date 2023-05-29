@@ -9,15 +9,12 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-function switchBackground() {
-  const randomColor = getRandomHexColor();
-  document.body.style.backgroundColor = randomColor;
-}
+const switchBackgroundColor = () => getRandomHexColor() = document.body.style.backgroundColor;
 
 function startButton() {
   startBtn.disabled = true;
-  stopBtn.disabled = false;
-  interval = setInterval(switchBackground, 1000);
+  switchBackgroundColor();
+  interval = setInterval(switchBackgroundColor, 1000);
 }
 
 function stopButton() {
@@ -26,5 +23,5 @@ function stopButton() {
   clearInterval(interval);
 }
 
-startBtn.addEventListener('click', startButton);
+startBtn.addEventListener('click', startButton );
 stopBtn.addEventListener('click', stopButton);
