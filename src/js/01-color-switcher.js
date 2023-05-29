@@ -9,10 +9,14 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const switchBackgroundColor = () => getRandomHexColor() = document.body.style.backgroundColor;
+function switchBackgroundColor() {
+  const color = getRandomHexColor();
+  document.body.style.backgroundColor = color;
+}
 
 function startButton() {
   startBtn.disabled = true;
+  stopBtn.disabled = false;
   switchBackgroundColor();
   interval = setInterval(switchBackgroundColor, 1000);
 }
