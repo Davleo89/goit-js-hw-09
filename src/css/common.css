@@ -42,3 +42,9 @@ button:hover{
 button:active{
   background-color: aquamarine;
 }
+
+.form input{
+  padding: 5px;
+  border-radius: 10px;
+}
+
